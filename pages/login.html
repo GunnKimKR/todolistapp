@@ -14,40 +14,64 @@
   <div id="wrap">
     <main id="form-container">
       <div class="form-group">
-        <section class="login-container">
-          <h2>Welcome!</h2>
-          <div class="login-form-row1">
-            <a href="#;">
-              <i class="fab fa-google"></i>
-            </a>
-            <a href="#;">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#;">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
-          <div class="login-form-row2">
-            <div class="input-style">
-              <input type="text" placeholder="Email">
+        <div class="btn-toggle-box">
+          <div class="btn-toggle-bg"></div>
+          <h2 class="btn-toggle btn-signin active">Sign in</h2>
+          <h2 class="btn-toggle btn-signup">Sign up</h2>
+        </div>
+        <div class="btn-sns-box">
+          <a href="#;">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="#;">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#;">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        <div class="form-login-slider-container">
+          <section class="login-container">
+            <strong class="blind">Sign in</strong>
+            <div class="login-form-row">
+              <div class="input-style">
+                <input type="text" placeholder="Email">
+              </div>
             </div>
-          </div>
-          <div class="login-form-row3">
-            <div class="input-style">
-              <input type="password" placeholder="Password">
+            <div class="login-form-row">
+              <div class="input-style">
+                <input type="password" placeholder="Password">
+              </div>
             </div>
-          </div>
-          <div class="login-form-row4">
-            <button type="submit" class="btn-login">login</button>
-          </div>
-          <div class="login-form-row5">
-            <a href="#;">Sign up</a>
-            <a href="#;">Forgot your password?</a>
-          </div>
-        </section>
-        <section class="join-container" style="display: none">
-          <h2>join</h2>
-        </section>
+            <div class="login-form-row btn-area">
+              <button type="submit" class="btn-login">Sign in</button>
+            </div>
+            <div class="login-form-row bottom">
+              <a href="#;">Forgot your password?</a>
+            </div>
+          </section>
+          <section class="login-container">
+            <strong class="blind">Sign up</strong>
+            <div class="login-form-row">
+              <div class="input-style">
+                <input type="text" placeholder="User name">
+              </div>
+            </div>
+            <div class="login-form-row">
+              <div class="input-style">
+                <input type="text" placeholder="Email">
+              </div>
+            </div>
+            <div class="login-form-row">
+              <div class="input-style">
+                <input type="password" placeholder="Password">
+              </div>
+            </div>
+            <div class="login-form-row btn-area">
+              <button type="submit" class="btn-login">Sign up</button>
+            </div>
+          </section>
+        </div>
       </div>
     </main>
   </div>
