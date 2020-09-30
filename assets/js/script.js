@@ -1,24 +1,30 @@
 'use strict'
 
+const modalBg = document.querySelector('.modal-popup');
+const modalPopup = document.querySelectorAll('.pop-form-container');
 
-const toggleBtnBg = document.querySelector('.btn-toggle-bg');
-const toggleBtn = document.getElementsByClassName('btn-toggle');
-const loginContainer = document.getElementsByClassName('login-container');
+const loginBtn = document.querySelector('.btn-primary.login');
+const joinBtn = document.querySelector('.btn-primary.join');
 
-toggleBtn[1].addEventListener('click', () => {
-    toggleBtnBg.style.left = '50%';
-    toggleBtn[0].classList.remove('active');
-    toggleBtn[1].classList.add('active');
-    for(var slide of loginContainer) {
-        slide.classList.add('active');
-    }
+const closeBtn = document.querySelectorAll('.btn-close');
+
+
+loginBtn.addEventListener('click', () => {
+    modalBg.classList.add('active');
+    modalPopup[0].classList.add('active');
 });
 
-toggleBtn[0].addEventListener('click', () => {
-    toggleBtnBg.style.left = '0';
-    toggleBtn[1].classList.remove('active');
-    toggleBtn[0].classList.add('active');
-    for(var slide of loginContainer) {
-        slide.classList.remove('active');
-    }
+joinBtn.addEventListener('click', () => {
+    modalBg.classList.add('active');
+    modalPopup[1].classList.add('active');
+});
+
+closeBtn[0].addEventListener('click', () => {
+    modalBg.classList.remove('active');
+    modalPopup[0].classList.remove('active');
+});
+
+closeBtn[1].addEventListener('click', () => {
+    modalBg.classList.remove('active');
+    modalPopup[1].classList.remove('active');
 });

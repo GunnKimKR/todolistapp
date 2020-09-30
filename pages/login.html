@@ -12,68 +12,50 @@
 </head>
 <body>
   <div id="wrap">
+    <header id="header">
+      <h1 class="logo">To Do List App</h1>
+    </header>
     <main id="form-container">
       <div class="form-group">
-        <div class="btn-toggle-box">
-          <div class="btn-toggle-bg"></div>
-          <h2 class="btn-toggle btn-signin active">Sign in</h2>
-          <h2 class="btn-toggle btn-signup">Sign up</h2>
-        </div>
-        <div class="btn-sns-box">
-          <a href="#;">
-            <i class="fab fa-google"></i>
-          </a>
-          <a href="#;">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="#;">
-            <i class="fab fa-instagram"></i>
-          </a>
-        </div>
-        <div class="form-login-slider-container">
-          <section class="login-container">
-            <strong class="blind">Sign in</strong>
-            <div class="login-form-row">
-              <div class="input-style">
-                <input type="text" placeholder="Email">
-              </div>
-            </div>
-            <div class="login-form-row">
-              <div class="input-style">
-                <input type="password" placeholder="Password">
-              </div>
-            </div>
-            <div class="login-form-row btn-area">
-              <button type="submit" class="btn-login">Sign in</button>
-            </div>
-            <div class="login-form-row bottom">
-              <a href="#;">Forgot your password?</a>
-            </div>
-          </section>
-          <section class="login-container">
-            <strong class="blind">Sign up</strong>
-            <div class="login-form-row">
-              <div class="input-style">
-                <input type="text" placeholder="User name">
-              </div>
-            </div>
-            <div class="login-form-row">
-              <div class="input-style">
-                <input type="text" placeholder="Email">
-              </div>
-            </div>
-            <div class="login-form-row">
-              <div class="input-style">
-                <input type="password" placeholder="Password">
-              </div>
-            </div>
-            <div class="login-form-row btn-area">
-              <button type="submit" class="btn-login">Sign up</button>
-            </div>
-          </section>
-        </div>
+        <button class="btn-primary login">로그인</button>
+        <button class="btn-primary">구글 계정 로그인</button>
+        <button class="btn-primary join">회원가입</button>
       </div>
     </main>
+    <div class="modal-popup">
+      <section class="pop-form-container pop-signin-container">
+        <h2>로그인</h2>
+        <div class="pop-form-group">
+          <div class="input-style">
+            <input type="text" placeholder="이메일 주소">
+          </div>
+          <div class="input-style">
+            <input type="text" placeholder="비밀번호">
+          </div>
+          <button class="btn-primary">로그인</button>
+        </div>
+        <button type="button" class="btn-close">X</button>
+      </section>
+      <section class="pop-form-container pop-signup-container">
+        <h2>회원 정보 입력</h2>
+        <div class="pop-form-group">
+          <div class="input-style">
+            <input type="text" placeholder="이메일 주소">
+          </div>
+          <div class="input-style">
+            <input type="text" placeholder="비밀번호">
+          </div>
+          <div class="input-style">
+            <input type="text" placeholder="비밀번호 확인">
+          </div>
+          <button class="btn-primary">가입하기</button>
+        </div>
+        <button type="button" class="btn-close">X</button>
+      </section>
+    </div>
+    <footer id="footer">
+      <small>&copy; 2020. To-do List all rights reserved.</small>
+    </footer>
   </div>
 </body>
 </html>
