@@ -1,106 +1,28 @@
 @charset "UTF-8";
 
-/* reset */
-div, span, body,
-header, main, section, footer,
-h1, h2, h3, h4, h5, h6,
-table, thead, tbody, tfoot, tr, th, td,
-input, select, label, button, textarea,
-ul, ol, li, dl, dt, dd,
-a, strong, i, b, em, img {
-  margin: 0;
-  padding: 0;
-  font: inherit;
-  vertical-align: baseline;
-}
 
-ul, ol {
-  list-style: none;
-}
+/*************** login > To Do List ***************/
 
-a {
-  color: #333;
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  vertical-align: top;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
-
-/* common */
-html {
-  font-size: .625rem;
-}
-
-body {
-  min-width: 32rem;
-}
-
-body, button, input, select, textarea {
-  font-weight: 500;
-  font-size: 1.4rem;
-  line-height: 1.5;
-  font-family: 'Chakra Petch', 'Noto sans KR', sans-serif;
-  color: #333;
-  overflow-wrap: break-word;
-  word-break: keep-all;
-  letter-spacing: .7px;
-  -webkit-text-size-adjust: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-}
-
-.blind {
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  clip: rect(0 0 0 0);
-}
-
-/* form-container */
-#form-container {
+/* sign-form-container */
+.sign-form-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  padding: 0 6%;
   background: url(../images/bg_login-page02.jpg) 50% 50%/cover no-repeat;
 }
 
-#form-container:after {
+.sign-form-container:before {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   background-color: rgba(0,0,0,.1);
-  content:''
+  content: '';
 }
 
-/* form-group */
-.form-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
+/* sign-form-group */
+.sign-form-group {
   position: relative;
   z-index: 10;
   width: 100%;
@@ -110,118 +32,118 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 2px 2px 5px rgba(0,0,0,.3);
 }
 
-.form-group > div + div {
+.sign-form-group > div + div {
   margin-top: 2rem;
 }
 
-
-/* form-group input style */
-.form-group input {
-  width: 100%;
-  border: none;
-  box-shadow: none;
-  background-color: transparent;
-  outline: none;
-}
-
-.form-group .input-style {
-  padding: .4rem 0 .8rem;
-  border-bottom: 1px solid rgba(0, 0, 0, .2);
-}
-
-/* form-group button style */
-.btn-primary {
-  width: 10rem;
-  padding: .5em;
-  border-radius: 2rem;
-  box-sizing: border-box;
-  background-color: #333;
-  color: #fff;
-}
-
-/* btn-toggle */
-.btn-toggle-box {
+.sign-form-btn-toggle-box {
   display: flex;
   position: relative;
-  border-radius: 3.5rem;
+  width: 75%;
+  margin: 0 auto;
+  border-radius: 2rem;
   box-shadow: 0 0 15px rgba(0,0,0,.15);
 }
 
 .btn-toggle-bg {
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
   z-index: -1;
-  width: 10rem;
-  height: 100%;
-  border-radius: 3rem;
-  box-sizing: border-box;
+  width: 50%;
+  border-radius: 2rem;
   background-color: #333;
   transition: left .5s ease;
   content:'';
 }
 
-.btn-toggle-box h2 {
-  border-radius: 3rem;
+.sign-form-btn-toggle-box .btn-toggle {
+  width: 50%;
   background-color: transparent;
   color: #333;
   text-align: center;
-  cursor: pointer;
   transition: color .5s ease;
 }
 
-.btn-toggle-box .btn-toggle.active {
+.btn-toggle-bg.active {
+  left: 50%;
+}
+
+.sign-form-btn-toggle-box .btn-toggle.active {
   color: #fff;
   
 }
 
-/* form-login-slider-container */
-.form-login-slider-container {
+/* sign-form-slider-container */
+.sign-form-slider-container {
   display: flex;
   overflow: hidden;
   width: 100%;
 }
 
-/* login-container */
-.login-container {
+/* sign-form */
+.sign-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-shrink: 0;
   width: 100%;
   padding: 0 3rem;
-  box-sizing: border-box;
   transition: transform .5s ease;
 }
 
-.login-container.active {
+.sign-form.active {
   transform: translateX(-100%);
 }
 
-.login-container .login-form-row {
+.sign-form-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
+}
+
+.sign-form-row + .sign-form-row {
   margin-top: 1.2rem;
 }
 
-.login-container .login-form-row.btn-area {
+.sign-form-row.btn-area {
   margin-top: 2rem;
-  text-align: center;
 }
 
-.login-form-row.bottom {
-  text-align: center;
+.sign-form-group input {
+  display: block;
+  width: 100%;
+  height: 3.4rem;
+  border-bottom: 1px solid #333;
+  text-indent: 5px;
+}
+
+.sign-form-row .input-error {
+  border-bottom-color: #ea4335;
+  color: #ea4335;
+}
+
+.sign-form-row .error-message {
+  width: 100%;
+  margin-top: .2rem;
+  font-size: 1.2rem;
+  text-align: left;
+  color: #e32a37;
+}
+
+.sign-form-row .input-success {
+  border-bottom-color: #34a853;
+  color: #34a853;
 }
 
 /* btn-sns-box */
-
 .btn-sns-box {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
   padding: 0 3rem;
-  box-sizing: border-box;
 }
 
 .btn-sns-box .btn-primary {
@@ -231,6 +153,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
+.btn-sns-box .btn-primary + .btn-primary {
+  margin-top: 1.2rem;
+}
 
 .btn-sns-box .btn-primary.google {
   background: linear-gradient(-120deg, #4285f4, #34a853, #fbbc05, #ea4335);
@@ -244,12 +169,238 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
 }
 
-.btn-sns-box .btn-primary + .btn-primary {
-  margin-top: 1rem;
-}
-
 .btn-sns-box .btn-primary i {
   margin: 0 1.2rem;
   font-size: 1.6rem;
 }
 
+/*************** Timetable > To Do List ***************/
+
+/* header */
+#nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: #fff;
+}
+
+.nav__tabmenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__tabmenu__item {
+  flex-basis: 33.33%;
+}
+
+.nav__tabmenu__item a {
+  display: block;
+  padding: 1.2rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #333;
+  text-align: center;
+}
+
+.nav__tabmenu__item a:focus {
+  outline: none;
+}
+
+.tabmenu-underline {
+  position: absolute;
+  top: 0;
+  bottom: 8px;
+  z-index: -1;
+  left: 33.33%;
+  width: 33.33%;
+  box-shadow: 0px 7px 6px -6px rgba(0, 0, 0, .6);
+}
+
+/* main-container */
+#main.main-container {
+  overflow-y: auto;
+  padding: 4.5rem 6% 2rem;
+}
+
+/* table-container */
+.month-group {
+  position: relative;
+  padding: 1rem 0;
+}
+
+.month-group:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  width: 300%;
+  z-index: -1;
+  background-color: #333;
+  content: '';
+}
+
+.month-list {
+  display: flex;
+  width: 100%;
+}
+
+.month-list__item {
+  flex-shrink: 0;
+  flex-basis: 33.33%;
+}
+
+.month-list__item:nth-child(n+2):nth-child(-n+3) {
+  text-align: center;
+}
+
+.month-list__item a {
+  display: block;
+  padding: .3rem 0;
+  font-weight: 500;
+  color: #fff;
+}
+
+.month-list__item:nth-child(2) a {
+  font-size: 1.6rem;
+}
+
+.calendar-year a {
+  display: block;
+  width: 5rem;
+  margin: 0 auto;
+  font-weight: 300;
+  color: #fff;
+  text-align: center;
+}
+
+/* table-calendar */
+.tabel-calendar-group {
+  padding: 1rem 0;
+}
+
+.table-calendar td {
+  position: relative;
+}
+
+.table-calendar .th-cell, 
+.table-calendar .td-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.table-calendar .td-style {
+  position: relative;
+}
+
+.table-calendar .td-style {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.table-calendar .today.plans {
+  background-color: #4285f4;
+  color: #fff;
+}
+
+.table-calendar .plans:after {
+  position: absolute;
+  right: 0;
+  bottom: .5rem;
+  left: 0;
+  width: .4rem;
+  height: .4rem;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: #fbbc05;
+  content: '';
+}
+
+.table-calendar .plannig-bg {
+  color: #fff;
+  opacity: .75;
+}
+
+.table-calendar .plannig-bg:after,
+.table-calendar .plannig-bg:before {
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+  width: 100%;
+  height: 3rem;
+  border-radius: 0;
+  background-color: #4285f4;
+  transform: translateY(-50%);
+  content: '';
+}
+
+.table-calendar .plannig-bg.first:after,
+.table-calendar .plannig-bg.first:before {
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+
+.table-calendar .plannig-bg.end:after,
+.table-calendar .plannig-bg.end:before {
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.td-cell .prev-month,
+.td-cell .next-month {
+  opacity: .5;
+}
+
+/* clip-plans-container */
+.clip-plans-container {
+  padding: 1rem 0;
+}
+
+.clip-plans-list {
+  padding: 1rem 0;
+}
+
+.clip-plans-list__item {
+  display: flex;
+  align-items: center;
+}
+
+.clip-plans-list__item + .clip-plans-list__item{
+  margin-top: 1rem;
+}
+
+.clip-icon,
+.clip-plan-time {
+  flex-shrink: 0;
+}
+
+.clip-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  background-color: #fbbc05;
+  color: #fff;
+}
+
+.clip-plan-time {
+  width: 7rem;
+  text-align: center;
+}
