@@ -38,8 +38,10 @@ table {
 
 input, button {
   border: none;
+  border-radius: 0;
   box-shadow: none;
   background: transparent;
+  -webkit-appearance: none;
 }
 
 :focus{
