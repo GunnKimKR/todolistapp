@@ -37,49 +37,47 @@
       <!---------------- table-calendar-container ---------------->
       <section class="table-calendar-container">
         <h2 class="blind">달력</h2>
-
-        <div class="month-group">
-          <ol class="month-list">
+        
+        <div class="month-group timetable">
+          <ol class="month-list timetable">
             <li class="month-list__item">
-              <a href="#">January</a>
-            </li>
-            <li class="month-list__item">
-              <a href="#">February</a>
-            </li>
-            <li class="month-list__item">
-              <a href="#">March</a>
-            </li>
-            <li class="month-list__item">
-              <a href="#">April</a>
-            </li>
-            <li class="month-list__item">
-              <a href="#">May</a>
-            </li>
-            <li class="month-list__item">
-              <a href="#">June</a>
-            </li>
-            <li class="month-list__item">
-              <a href="#">July</a>
-            </li>
-            <li class="month-list__item">
-              <a href="#">August</a>
-            </li>
-            <li class="month-list__item">
-              <a href="#">September</a>
-            </li>
-            <li class="month-list__item">
-              <a href="#">October</a>
-            </li>
-            <li class="month-list__item">
-              <a href="#">November</a>
-            </li>
-            <li class="month-list__item">
-              <a href="#">December</a>
+              <a href="#">Sep</a>
             </li>
           </ol>
-          <div class="calendar-year">
-            <a href="#;">2020</a>
-          </div>
+          <ul class="date-list">
+            <li class="date-list__item">
+              <a href="#;">
+                <i class="fas fa-chevron-left"></i>
+              </a>
+            </li>
+            <li class="date-list__item">
+              <a href="#">14</a>
+            </li>
+            <li class="date-list__item today">
+              <a href="#">15</a>
+            </li>
+            <li class="date-list__item">
+              <a href="#">16</a>
+            </li>
+            <li class="date-list__item">
+              <a href="#">17</a>
+            </li>
+            <li class="date-list__item">
+              <a href="#">18</a>
+            </li>
+            <li class="date-list__item">
+              <a href="#">19</a>
+            </li>
+            <li class="date-list__item">
+              <a href="#">20</a>
+            </li>
+            <li class="date-list__item">
+              <a href="#;">
+                <i class="fas fa-chevron-right"></i>
+              </a>
+            </li>
+          </ul>
+          <button type="button" class="btn-calendar--drop"></button>
         </div>
 
         <div class="tabel-calendar-group">
@@ -371,36 +369,68 @@
       </section>
       <!---------------- //table-calendar-container ---------------->
 
-      <!---------------- clip-plans-container ---------------->
-      <section class="clip-plans-container">
-        <h2 class="blind">주요 일정</h2>
-        <strong class="clip-plans-title">Monday. 15</strong>
-        <ul class="clip-plans-list">
-          <li class="clip-plans-list__item">
-            <span class="clip-icon">
-              <i class="fas fa-paperclip"></i>
-            </span>
-            <span class="clip-plan-time">09:00</span>
-            <a href="#;" class="clip-plan">To Do List App 배포</a>
-          </li>
-          <li class="clip-plans-list__item">
-            <span class="clip-icon">
-              <i class="fas fa-paperclip"></i>
-            </span>
-            <span class="clip-plan-time">09:00</span>
-            <a href="#;" class="clip-plan">To Do List App 배포</a>
-          </li>
-          <li class="clip-plans-list__item">
-            <span class="clip-icon">
-              <i class="fas fa-paperclip"></i>
-            </span>
-            <span class="clip-plan-time">09:00</span>
-            <a href="#;" class="clip-plan">To Do List App 배포</a>
-          </li>
-        </ul>
+      <section class="timetable-container">
+        <strong class="timetable-title">Monday. 15</strong>
+        <table class="table-timetable">
+          <tr>
+            <th scope="row" class="th-hour">4</th>
+            <td>
+              <div class="td-content">
+                <span class="label--orange" data-time="0030">기상 후 스트레칭 기상 후 스트레칭</span>
+                <span class="label--skyblue" data-time="0030">아침 식사 및 세면</span>
+              </div>
+            </td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row" class="th-hour">5</th>
+            <td rowspan="2">
+              <div class="td-content">
+                <span class="label--orange" data-time="0130">영어 학원 이동</span>
+                <span class="label--darkgreen" data-time="0030">수업 준비</span>
+              </div>
+            </td>
+            <td rowspan="2">
+              <div class="td-content">
+                <span class="label--skyblue" data-time="0130">텝스 인강</span>
+              </div>
+            </td>
+            <td rowspan="4">
+              <div class="td-content">
+                <span class="label--yellowgreen" data-time="0200" style="top:20px">엄청 바쁘다</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" class="th-hour">6</th>
+          </tr>
+          <tr>
+            <th scope="row" class="th-hour">7</th>
+            <td>
+              <div class="td-content">
+                <span class="label--tomato" data-time="0100">영어 수업</span>
+              </div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row" class="th-hour">8</th>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row" class="th-hour">9</th>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
       </section>
-      <!---------------- //clip-plans-container ---------------->
-
+      
+      <button type="button" class="btn-todo-add">
+        <i class="fas fa-plus"></i>
+      </button>
     </main>
     <!---------------- //main-container ---------------->
 

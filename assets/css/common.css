@@ -36,6 +36,10 @@ table {
   border-spacing: 0;
 }
 
+button {
+  cursor: pointer;
+}
+
 input, button {
   border: none;
   border-radius: 0;
@@ -106,5 +110,4 @@ dt, th, strong, b {
   background-color: #333;
   font-weight: 700;
   color: #fff;
-  cursor: pointer;
 }

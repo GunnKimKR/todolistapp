@@ -174,7 +174,7 @@
   font-size: 1.6rem;
 }
 
-/*************** Timetable > To Do List ***************/
+/*************** Calendar > To Do List ***************/
 
 /* nav */
 #nav {
@@ -215,7 +215,7 @@
   top: 0;
   bottom: 8px;
   z-index: -1;
-  left: 33.33%;
+  left: 0;
   width: 33.33%;
   box-shadow: 0px 7px 6px -6px rgba(0, 0, 0, .6);
 }
@@ -223,7 +223,7 @@
 /* main-container */
 #main.main-container {
   overflow-y: auto;
-  padding: 4.5rem 6% 2rem;
+  padding: 5rem 6% 2rem;
 }
 
 /* table-calendar-container */
@@ -403,3 +403,162 @@
   color: #fff;
 }
 
+/*************** Timetable > To Do List ***************/
+.month-group.timetable {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.month-list.timetable {
+  flex-shrink: 0;
+  width: auto;
+}
+
+.date-list {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin-left: 1.5rem;
+}
+
+.date-list .date-list__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.7rem;
+  height: 2.7rem;
+}
+
+.date-list .date-list__item.today {
+  border: 1px solid #fbbc05;
+  border-radius: 50%;
+  background-color: #fbbc05;
+}
+
+.date-list .date-list__item.today a:focus {
+  outline: none;
+}
+
+.date-list .date-list__item a {
+  color: #fff;
+}
+
+.btn-calendar--drop {
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  font-size: 2rem;
+  line-height: 1;
+  color: #333;
+  transform: translateX(-50%);
+}
+
+.btn-calendar--drop:before {
+  font-weight: 900;
+  font-family: 'Font Awesome 5 Free';
+  content: '\f0d7';
+}
+
+/* timetable-container */
+.timetable-container {
+  padding: 1rem 0;
+  border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.timetable-title {
+  font-weight: 700;
+}
+
+.table-timetable {
+  table-layout: fixed;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.table-timetable,
+.table-timetable th,
+.table-timetable td {
+  border: 1px solid rgba(0,0,0,.05);
+  vertical-align: middle;
+} 
+
+.table-timetable .th-hour {
+  width: 30px;
+  font-weight: 500;
+}
+
+.table-timetable td {
+  height: 40px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.td-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  font-size: 12px;
+}
+
+.td-content span {
+  overflow: hidden;
+  position: relative;
+  width: 70%;
+  padding-left: 7px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.td-content span[data-time="0030"] {
+  height: 20px;
+}
+
+.td-content span[data-time="0100"] {
+  height: 40px;
+}
+
+.td-content span[data-time="0130"] {
+  height: 60px;
+}
+
+.td-content span[data-time="0200"] {
+  height: 80px;
+}
+
+/* label color */
+.td-content .label--orange {
+  box-shadow: inset 4px 0 #ffe600;
+}
+
+.td-content .label--skyblue {
+  box-shadow: inset 4px 0 #65caf1;
+}
+
+.td-content .label--darkgreen {
+  box-shadow: inset 4px 0 #a8a8a8;
+}
+
+.td-content .label--tomato {
+  box-shadow: inset 4px 0 #ff6347;
+}
+
+.td-content .label--yellowgreen {
+  box-shadow: inset 4px 0 #afee32;
+}
+
+.btn-todo-add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 6%;
+  bottom: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: #333;
+  color: #fff;
+  opacity: .8;
+}
