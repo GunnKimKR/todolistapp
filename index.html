@@ -7,14 +7,14 @@
   <title>Calendar :: To Do List</title>
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/common.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <script src="assets/js/script.js" defer></script>
+  <link rel="stylesheet" href="./assets/css/common.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/js/script.js" defer></script>
 </head>
 <body>
   <div id="wrap">
 
-    <!---------------- header ---------------->
+    <!---------------------- Nav ---------------------->
     <nav id="nav">
       <div class="tabmenu-underline"></div>
       <ul class="nav__tabmenu">
@@ -29,60 +29,58 @@
         </li>
       </ul>
     </nav>
-    <!---------------- //header ---------------->
+    <!---------------------- //Header ---------------------->
 
-    <!---------------- main-container ---------------->
+    <!---------------------- Main Container ---------------------->
     <main id="main" class="main-container">
 
-      <!---------------- table-calendar-container ---------------->
-      <section class="table-calendar-container">
+      <!---------------------- Calendar Container ---------------------->
+      <section class="calendar-container">
         <h2 class="blind">달력</h2>
 
-        <div class="month-group">
-          <ol class="month-list">
-            <li class="month-list__item">
+        <div class="calendar-header-group">
+          <ol class="calendar-month-list">
+            <li class="calendar-month-list__item">
               <a href="#">January</a>
             </li>
-            <li class="month-list__item">
+            <li class="calendar-month-list__item">
               <a href="#">February</a>
             </li>
-            <li class="month-list__item">
+            <li class="calendar-month-list__item">
               <a href="#">March</a>
             </li>
-            <li class="month-list__item">
+            <li class="calendar-month-list__item">
               <a href="#">April</a>
             </li>
-            <li class="month-list__item">
+            <li class="calendar-month-list__item">
               <a href="#">May</a>
             </li>
-            <li class="month-list__item">
+            <li class="calendar-month-list__item">
               <a href="#">June</a>
             </li>
-            <li class="month-list__item">
+            <li class="calendar-month-list__item">
               <a href="#">July</a>
             </li>
-            <li class="month-list__item">
+            <li class="calendar-month-list__item">
               <a href="#">August</a>
             </li>
-            <li class="month-list__item">
+            <li class="calendar-month-list__item">
               <a href="#">September</a>
             </li>
-            <li class="month-list__item">
+            <li class="calendar-month-list__item">
               <a href="#">October</a>
             </li>
-            <li class="month-list__item">
+            <li class="calendar-month-list__item">
               <a href="#">November</a>
             </li>
-            <li class="month-list__item">
+            <li class="calendar-month-list__item">
               <a href="#">December</a>
             </li>
           </ol>
-          <div class="calendar-year">
-            <a href="#;">2020</a>
-          </div>
+          <a href="#;" class="calendar-year">2020</a>
         </div>
 
-        <div class="tabel-calendar-group">
+        <div class="calendar-body-group">
           <table class="table-calendar">
             <thead>
               <tr>
@@ -369,7 +367,7 @@
           </table>
         </div>
       </section>
-      <!---------------- //table-calendar-container ---------------->
+      <!---------------------- //Calendar Container ---------------------->
 
       <!---------------- clip-plans-container ---------------->
       <section class="clip-plans-container">
@@ -378,21 +376,21 @@
         <ul class="clip-plans-list">
           <li class="clip-plans-list__item">
             <span class="clip-icon">
-              <i class="fas fa-paperclip"></i>
+              <i class="fas fa-star"></i>
             </span>
             <span class="clip-plan-time">09:00</span>
             <a href="#;" class="clip-plan">To Do List App 배포</a>
           </li>
           <li class="clip-plans-list__item">
             <span class="clip-icon">
-              <i class="fas fa-paperclip"></i>
+              <i class="fas fa-star"></i>
             </span>
             <span class="clip-plan-time">09:00</span>
             <a href="#;" class="clip-plan">To Do List App 배포</a>
           </li>
           <li class="clip-plans-list__item">
             <span class="clip-icon">
-              <i class="fas fa-paperclip"></i>
+              <i class="fas fa-star"></i>
             </span>
             <span class="clip-plan-time">09:00</span>
             <a href="#;" class="clip-plan">To Do List App 배포</a>
@@ -405,7 +403,7 @@
         <i class="fas fa-plus"></i>
       </button>
     </main>
-    <!---------------- //main-container ---------------->
+    <!---------------------- //Main Container ---------------------->
 
   </div>
 </body>
