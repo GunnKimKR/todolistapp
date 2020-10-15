@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Calendar :: To Do List</title>
+  <title>To do :: To Do List</title>
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-  <link rel="stylesheet" href="./assets/css/common.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <script src="./assets/js/script.js" defer></script>
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/script.js" defer></script>
 </head>
 <body>
   <div id="wrap">
 
-    <!---------------------- Nav ---------------------->
+    <!---------------------- Header ---------------------->
     <nav id="nav">
       <h2 class="blind">메뉴</h2>
       <div class="tabmenu-underline"></div>
@@ -38,50 +38,50 @@
       <!---------------------- Calendar Container ---------------------->
       <section class="calendar-container">
         <h2 class="blind">달력</h2>
-
-        <div class="calendar-header-group">
+        
+        <div class="calendar-header-group timetable">
           <ol class="calendar-month-list">
             <li class="calendar-month-list__item">
-              <a href="#">January</a>
-            </li>
-            <li class="calendar-month-list__item">
-              <a href="#">February</a>
-            </li>
-            <li class="calendar-month-list__item">
-              <a href="#">March</a>
-            </li>
-            <li class="calendar-month-list__item">
-              <a href="#">April</a>
-            </li>
-            <li class="calendar-month-list__item">
-              <a href="#">May</a>
-            </li>
-            <li class="calendar-month-list__item">
-              <a href="#">June</a>
-            </li>
-            <li class="calendar-month-list__item">
-              <a href="#">July</a>
-            </li>
-            <li class="calendar-month-list__item">
-              <a href="#">August</a>
-            </li>
-            <li class="calendar-month-list__item">
-              <a href="#">September</a>
-            </li>
-            <li class="calendar-month-list__item">
-              <a href="#">October</a>
-            </li>
-            <li class="calendar-month-list__item">
-              <a href="#">November</a>
-            </li>
-            <li class="calendar-month-list__item">
-              <a href="#">December</a>
+              <a href="#">Sep</a>
             </li>
           </ol>
-          <a href="#;" class="calendar-year">2020</a>
+          <ul class="calendar-date-list">
+            <li class="calendar-date-list__item">
+              <a href="#;">
+                <i class="fas fa-chevron-left"></i>
+              </a>
+            </li>
+            <li class="calendar-date-list__item">
+              <a href="#">14</a>
+            </li>
+            <li class="calendar-date-list__item today">
+              <a href="#">15</a>
+            </li>
+            <li class="calendar-date-list__item">
+              <a href="#">16</a>
+            </li>
+            <li class="calendar-date-list__item">
+              <a href="#">17</a>
+            </li>
+            <li class="calendar-date-list__item">
+              <a href="#">18</a>
+            </li>
+            <li class="calendar-date-list__item">
+              <a href="#">19</a>
+            </li>
+            <li class="calendar-date-list__item">
+              <a href="#">20</a>
+            </li>
+            <li class="calendar-date-list__item">
+              <a href="#;">
+                <i class="fas fa-chevron-right"></i>
+              </a>
+            </li>
+          </ul>
+          <button type="button" class="btn-calendar-drop"></button>
         </div>
 
-        <div class="calendar-body-group">
+        <div class="calendar-body-group timetable">
           <table class="table-calendar">
             <thead>
               <tr>
@@ -370,36 +370,47 @@
       </section>
       <!---------------------- //Calendar Container ---------------------->
 
-      <!---------------- clip-plans-container ---------------->
-      <section class="clip-plans-container">
-        <h2 class="blind">주요 일정</h2>
+      <!---------------------- Todo Container ---------------------->
+      <section class="todo-container">
+        <h2 class="blind">투두 리스트</h2>
         <strong>Monday. 15</strong>
-        <ul class="clip-plans-list">
-          <li class="clip-plans-list__item">
-            <span class="clip-icon">
-              <i class="fas fa-star"></i>
-            </span>
-            <span class="clip-plan-time">09:00</span>
-            <a href="#;" class="clip-plan">To Do List App 배포</a>
+        <ul class="todo-list completed">
+          <li class="todo-list__item">
+            <div class="todo-list__item__inner">
+              <div class="label-todo"></div>
+              <div class="text-todo" style="text-decoration: line-through;">
+                To Do List Webapp Project
+                <div class="time-todo">11:00 - 15:00</div>
+              </div>
+              <div class="buttons-box">
+                <button type="button" class="btn-check completed">
+                  
+                </button>
+                <button type="button" class="btn-delete">
+                  <i class="far fa-trash-alt"></i>
+                </button>
+              </div>
+            </div>
           </li>
-          <li class="clip-plans-list__item">
-            <span class="clip-icon">
-              <i class="fas fa-star"></i>
-            </span>
-            <span class="clip-plan-time">09:00</span>
-            <a href="#;" class="clip-plan">To Do List App 배포</a>
-          </li>
-          <li class="clip-plans-list__item">
-            <span class="clip-icon">
-              <i class="fas fa-star"></i>
-            </span>
-            <span class="clip-plan-time">09:00</span>
-            <a href="#;" class="clip-plan">To Do List App 배포</a>
+          <li class="todo-list__item">
+            <div class="todo-list__item__inner">
+              <div class="label-todo"></div>
+              <div class="text-todo">
+                투두 리스트 웹앱 프로젝트
+              </div>
+              <div class="buttons-box">
+                <button type="button" class="btn-check">
+                </button>
+                <button type="button" class="btn-delete">
+                  <i class="far fa-trash-alt"></i>
+                </button>
+              </div>
+            </div>
           </li>
         </ul>
       </section>
-      <!---------------- //clip-plans-container ---------------->
-
+      <!---------------------- //Todo Container ---------------------->
+      
       <!-- Add button -->
       <div class="todo-add-container">
         <input type="text" placeholder="Add Todo..." class="input-todo-add">
